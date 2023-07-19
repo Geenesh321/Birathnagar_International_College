@@ -1,0 +1,220 @@
+@import '../../../css-config/mixins.scss';
+
+.BIHM_Container {
+  height: 445px;
+  align-items: center;
+  width: 100%;
+
+  .BIHM_Photo {
+    position: relative;
+    height: 100%;
+    width: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+
+    }
+  }
+}
+
+.BIHM_Heading {
+  position: relative;
+  width: 70%;
+  min-height: 100px;
+  padding: 10px;
+  border-radius: 8px;
+  background: #D43F45;
+  flex-shrink: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -50px;
+  box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  p {
+    color: #FFF;
+    font-size: 30px;
+    font-family: var(--pFont);
+    font-weight: Bold;
+    text-align: center;
+    top: 30px;
+  }
+}
+
+.about_BIHM {
+  position: relative;
+  height: 500px;
+  text-align: justify;
+  position: relative;
+  margin-left: 143px;
+
+
+
+  .contains_BIHM {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 25%;
+    transform: translateX(-50%);
+
+    .about_Image {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-right: 20px;
+
+      .Nailshika_Image {
+        width: 400px;
+        height: 400px;
+        position: relative;
+        left: 618px;
+        top: 40px;
+        border-radius: 10px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
+
+        @media (max-width: 768px) {
+          width: 300px;
+          height: 300px;
+          left: 0;
+          top: 0;
+        }
+      }
+    }
+
+    .frame {
+      display: flex;
+      position: relative;
+      left: -45px;
+
+      .red_BIHM,
+      .blue_BIHM {
+        height: 200px;
+        width: 200px;
+      }
+
+      .red_BIHM {
+        position: relative;
+        background-color: red;
+        top: -395px;
+        left: 620px;
+        border-radius: 10px 0px 0px 0px;
+        z-index: -1;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
+
+      }
+
+      .blue_BIHM {
+        background-color: blue;
+        position: relative;
+        left: 700px;
+        top: -130px;
+        border-radius: 0px 0px 10px 0px;
+        z-index: -1;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
+
+
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      .frame {
+        display: none;
+      }
+
+    }
+  }
+
+  .text-content {
+    display: flex;
+    flex-direction: column;
+    margin: -200px 0px 0px -425px;
+
+
+
+    h1 {
+      color: #D43F45;
+      text-align: justify;
+      font-size: 6vh;
+      font-family: var(--sFont);
+      font-weight: 800;
+    }
+
+    p {
+      position: relative;
+      color: rgba(0, 0, 0, 0.50);
+      text-align: justify;
+      font-size: 2.5vh;
+      font-family: var(--sFont);
+      font-weight: 500;
+      width: 500px;
+      top: 30px;
+
+    }
+  }
+}
+
+
+.BIHM_Module {
+  text-align: center;
+
+  h1 {
+    margin-top: 0;
+    color: #000;
+    text-align: center;
+    font-size: 60px;
+    font-family: var(--sFont);
+    font-weight: 700;
+    padding-top: 30px;
+  }
+
+  p {
+    color: #6B6B6B;
+    text-align: center;
+    font-size: 16px;
+    font-family: var(--pFont);
+    font-weight: 500;
+    padding: 10px 27% 0px 27%;
+  }
+
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 5vh;
+      padding-top: 90px;
+    }
+
+    p {
+      font-size: 12px;
+      padding: 15px 60px 0px 68px;
+    }
+  }
+}
+
+// Responsive styles for small screens
+@media (max-width: 768px) {
+
+  .contains_BIHM {
+    @media (max-width: 768px) {
+      flex-direction: column;
+      margin-left: 20px;
+    }
+    
+    .text-content {
+      margin: 20px 0;
+      width: 100%;
+
+      h1 {
+        font-size: 4.5vh;
+      }
+
+      p {
+        font-size: 2vh;
+        width: 100%;
+        top: 0;
+      }
+    }
+  }
+}

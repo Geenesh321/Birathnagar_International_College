@@ -1,0 +1,73 @@
+@import '../../../css-config/mixins.scss';
+
+.next-section{
+    width: 100%;
+    background-image: url('../../../assets/Landing/body.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 80px 8%;
+    display: flex;
+    flex-direction: column;
+    background-attachment: fixed;
+    @include sm{
+        gap: 50px;
+        padding: 40px 8%;
+    }
+    .next-step{
+        background-color: rgba(0,0,0,0.2); 
+        backdrop-filter: blur(2px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 50px 0;
+        gap: 100px;@include sm{
+            gap: 50px;
+        }
+        .next-heading{
+            h2{
+                text-align: center;
+                font-family: var(--hFont);
+                font-size: 40px;
+                color: white;
+                @include sm{
+                    font-size: 32px;
+                }
+            }
+        }
+    
+        .next-content{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-flow: wrap;
+            column-gap: 100px;
+            row-gap: 50px;
+            @include sm{
+                flex-direction: column;
+                width: 100%;
+            }
+            button{
+                width: 200px;
+                height: 50px;
+                background: none;
+                border: 2px solid white;
+                outline: none;
+                border-radius: 5px;
+                color: white;
+                font-weight: 500;
+                font-size: 18px;
+                transition: all 1s ease-in-out;
+                cursor: pointer;
+                @include sm{
+                    width: 80%;
+                }
+                &:hover{
+                    box-shadow: inset 600px 0 0 0 white;
+                    color: black;
+                }
+            }
+        }
+    }
+}

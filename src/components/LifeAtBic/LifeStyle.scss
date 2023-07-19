@@ -1,0 +1,1576 @@
+@import "../../css-config/lifestyle_mixin.scss";
+
+* {
+  p {
+    font: 16px var(--pFont);
+  }
+}
+
+// footer{
+  
+//     display: none;
+
+// }
+.top-container {
+  width: 100%;
+  // height: 100vh;
+  // color: white;
+  // background-color: #0057ff;
+  color: white;
+  .top-first-partition {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .text{
+      h1{
+        position: absolute;
+        font-family: var(--hFont);
+        font-weight: 700;
+        font-size: 60px;
+        color: rgba(0,0,0,0.3);
+        &:nth-child(1){
+          left: 0;
+          bottom: 450px;
+          left: 100px;
+        }
+        &:nth-child(2){
+          left: 0;
+          bottom: 250px;
+          left: 300px;
+        }
+        &:nth-child(3){
+          bottom: 250px;
+          right: 250px;
+        }
+      }
+    }
+    .slider{
+      width: 400px;
+      overflow: hidden;
+      margin-top: 20px;
+      margin-bottom: -5px;
+      .slides{
+        display: flex;
+        gap: 0;
+        .slide{
+          min-width: 100%;
+          transition: all 0.5s ease;
+          img{
+            width: 100%;
+          }
+        }
+      }
+    }
+  //   div{
+  // // transform: translate(20%);
+  //     width: 100%;
+  //   }
+  //   height: 50vh;
+  //   @include smm {
+  //     width: 100%;
+  //   }
+  }
+  .top-second-partition {
+    background-color: #457992;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    @include smm {
+      display: block;
+      justify-content: none;
+      align-items: normal;
+      width: 100%;
+    }
+    //   @include xsmh{
+    //     display: flex;
+    //     flex-direction: column;
+    //     justify-content: center;
+    //     align-items: center;
+    //     gap: 20px;
+    // }
+    .top-second-first {
+      height: 200.01px;
+      display: flex;
+      width: 438px;
+      // width: ;
+      align-items: flex-start;
+      flex-direction: column;
+      justify-content: space-between;
+      @include md {
+        height: 150px;
+      }
+      @include lg {
+        height: 170px;
+      }
+      @include smm {
+        // height: 10px;
+        height: 140.01px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 100%;
+      }
+      @include xl {
+        height: 180.01px;
+      }
+      h2 {
+        font: 20px var(--hFont);
+        font-weight: bold;
+        @include xxl {
+          font-size: 18px;
+        }
+        @include lg {
+          font-size: 16px;
+          justify-content: space-around;
+        }
+        @include smm {
+          display: block;
+          width: 100%;
+          text-align: center;
+        }
+      }
+      p {
+        width: 369px;
+        font: 16px var(--pFont);
+        @include xxl {
+          font-size: 16px;
+        }
+        @include lg {
+          font-size: 12px;
+        }
+        @include md {
+          font-size: 11px;
+          justify-content: space-around;
+        }
+        @include smm {
+          font-size: 16px;
+          display: block;
+          width: 70%;
+          text-align: center;
+        }
+      }
+
+      img {
+        width: 369px;
+        height: 59.01px;
+        @include lg {
+          width: 363.5px;
+          height: 55.01px;
+        }
+        @include md {
+          width: 330px;
+          height: 53px;
+        }
+        @include smm {
+          display: none;
+        }
+      }
+      @include smm {
+        .top-first-partition-image {
+          width: 100%;
+          align-items: center;
+          display: flex;
+          justify-content: center;
+        }
+      }
+    }
+    .top-second-second {
+      height: 100%;
+      display: flex;
+      width: 369px;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      @include smm {
+        width: 100%;
+      }
+      // @include xsmh{
+      //     height: 1vh;
+      // }
+      h1 {
+        text-align: right;
+        font-weight: bolder;
+        font: 64px var(--hFont);
+        @include lg {
+          font-size: 48px;
+        }
+        @include smm {
+          display: none;
+        }
+      }
+      .before-lifestyle{
+        width: 40px;
+        height: 40px;
+        background-image: url('../../assets/LifeStyle/pre.png');
+        // rotate: ;
+        background-size: cover;
+        background-position: center;
+
+      }
+      .after-lifestyle{
+        width: 40px;
+        height: 40px;
+        background-image: url('../../assets/LifeStyle/pre.png');
+        background-size: cover;
+        background-position: center;
+        transform: rotate(180deg);
+      }
+      .volume {
+        width: 212px;
+        height: 24px;
+        @include smm {
+          display: none;
+        }
+      }
+      div {
+        width: 359px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include smm {
+          justify-content: space-evenly;
+        }
+      }
+    }
+  }
+}
+.second-teaching-lifestyle {
+  // animation: fade-bottom 1s ease-in -4s ;
+  // animation: 3s ease-in 1s 2 reverse both paused  fade-bottom;
+  // animation: 1s linear 0s infinite alternate fade-bottom;
+
+  // animation: wipe-enter 2s ease-in-out;
+  transition: opacity 1.5s easSe, transform 1.5s ease;
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  justify-content: space-around;
+  color: rgba(0, 0, 0, 0.5);
+  align-items: center;
+  @include xxl {
+    height: 60vh;
+  }
+  @include xl {
+    height: 90vh;
+  }
+  @include lg {
+    height: 55vh;
+  }
+  @include smm {
+    height: 70vh;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    // gap: 60px;
+    // align-items: center;
+  }
+  // @include xsmh{
+  //     height: 55vh;
+  // }
+
+  .second {
+    align-items: center;
+    display: flex;
+    @include smm {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 70vh;
+    }
+    img {
+      // animation: hover 4s ease-in-out 0s infinite;
+      width: 600px;
+      // height: 300px;
+      @include lg {
+        width: 300px;
+      }
+      @include smm {
+        width: 300px;
+        height: 200px;
+      }
+    }
+  }
+  .teaching-lifestyle-content {
+    width: 518px;
+    height: 80%;
+    justify-content: space-evenly;
+    display: flex;
+    flex-direction: column;
+    @include lg {
+      height: 50%;
+      justify-content: space-between;
+    }
+    @include smm {
+      height: 80%;
+
+      justify-content: space-around;
+    }
+    @include sm {
+      height: 70%;
+      width: 70%;
+      justify-content: space-between;
+    }
+    // @include xsmh{
+    //     height: 70vh;
+    // }
+    h2 {
+      font: 24px var(--hFont);
+      font-weight: bold;
+      color: rgba(0, 0, 0, 0.7);
+      @include lg {
+        font-size: 15px;
+      }
+    }
+    p {
+      font-weight: 500;
+      text-align: justify;
+      @include lg {
+        // height: 60%;
+        justify-content: space-around;
+      }
+      @include lg {
+        font-size: 12px;
+      }
+    }
+  }
+}
+.teaching-lifestyle-buttons-area {
+  display: flex;
+  // width: 513px;
+  align-items: center;
+  justify-content: space-between;
+  #contact_us_btn {
+    --color: #000000;
+    padding: 0.8em 1.7em;
+    background-color: transparent;
+    border-radius: .3em;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: .5s;
+    font-weight: bold;
+    font-size: 17px;
+    border: 1px solid;
+    font: 16px var(--pFont);
+    text-transform: uppercase;
+    color: var(--color);
+    z-index: 1;
+    @include sm{
+      font: 12px var(--pFont);
+      font-weight: bold;
+     }
+     @include xsm{
+      font: 10px var(--pFont);
+      font-weight: bold;
+     }
+   }
+  
+  //  @include lg {
+  //   width: 180px;
+  //   height: 30px;
+  // }
+  // @include smm {
+  //   width: 40%;
+  //   height: 40px;
+  // }
+   
+   #contact_us_btn::before, #contact_us_btn::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 50px;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    border-radius: 50%;
+    z-index: -1;
+    background-color: var(--color);
+    transition: 1s ease;
+   }
+   
+   #contact_us_btn::before {
+    top: -1em;
+    left: -1em;
+   }
+   
+   #contact_us_btn::after {
+    left: calc(100% + 1em);
+    top: calc(100% + 1em);
+   }
+   
+   #contact_us_btn:hover::before, #contact_us_btn:hover::after {
+    height: 410px;
+    width: 410px;
+   }
+   
+   #contact_us_btn:hover {
+    color: #ffffff;
+   }
+   
+   #contact_us_btn:active {
+    filter: brightness(.8);
+   }
+  .teaching-lifestyle-button {
+    border-radius: 5px;
+    width: 240px;
+    height: 46px;
+    background: #4339ad;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    font: 16px var(--pFont);
+    color: white;
+    @include lg {
+      width: 180px;
+      height: 30px;
+    }
+    @include smm {
+      width: 40%;
+      height: 40px;
+    }
+  }
+  #contact_us_btn {
+    background-color: white;
+    border: 2px solid black;
+    color: black;
+  }
+}
+.third-teaching-lifestyle {
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  @include xl {
+    height: 60vh;
+  }
+  @include lg {
+    height: 40vh;
+    // justify-content: space-between;
+  }
+  @include smm {
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  // @include xsmh{
+  //     height: 50vh;
+  // }
+
+  img {
+    width: 600px;
+    // height: 300px;
+    @include lg {
+      width: 300px;
+    }
+    @include smm {
+      width: 300px;
+      height: 200px;
+    }
+  }
+  .third-teaching-content-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 521px;
+    @include sm {
+      height: 40%;
+      width: 70%;
+      justify-content: space-around;
+    }
+    .third-teaching-content {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      justify-content: space-between;
+      @include lg {
+        height: 50%;
+        justify-content: space-around;
+      }
+      @include smm {
+        height: 80%;
+        justify-content: space-around;
+      }
+      @include sm {
+        // width: 60%;
+        // align-items: center;
+        height: 60%;
+      }
+      h2 {
+        font: 24px var(--hFont);
+        font-weight: bold;
+        color: rgba(0, 0, 0, 0.7);
+        @include lg {
+          font-size: 15px;
+        }
+      }
+      p {
+        text-align: justify;
+        font-weight: 500;
+        color: rgba(0, 0, 0, 0.5);
+        @include lg {
+          font-size: 12px;
+        }
+        @include sm {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+.fourth-content-wrapper {
+  display: flex;
+  height: 70vh;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  justify-content: flex-start;
+  @include xll{
+    height: 100vh;
+  }
+  @include xl{
+    justify-content: center;
+    height:170vh;
+  }
+  @include smm{
+    height: 80vh;
+  }
+  h3 {
+    display: block;
+    text-align: center;
+    height: 100px;
+    width: 100%;
+    left: 30px;
+    // display: flex;
+    align-items: center;
+    color: rgba(0, 0, 0, 0.7);
+    font: 24px var(--hFont);
+    font-weight: bold;
+    margin-top: 2%;
+    @include xxl {
+    //   width: 100%;
+      display: inline-block;
+    //   font-size: 10px;
+      left: 0;
+    //   top: 30px;
+    height: 50px;
+    }
+    @include xll{
+        height: 70px; 
+        // width: 605;
+    }
+    @include xl{
+      width: 70%;
+      padding: 2%;
+      // hFeight: 20%;
+      // font-weight: 20px;
+    }
+    @include lgg{
+      width: 70%;
+    }
+    @include lg{
+      width: 73%;
+      font-size: 18px;
+    }
+    @include md{
+      width: 75%;
+      font-size: 16px;
+    }
+  }
+  // justify-content: none;
+  // align-items: center;
+  .fourth-content-wrapper-circle {
+    animation: hover 4s ease-in-out 0s infinite;
+    width: 300px;
+    height: 300px;
+    background-color: #4a4a4a;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font: 24px "Poppins", sans-serif;
+    position: absolute;
+    top: 0%;
+    right: 9%;
+    z-index: -1;
+    bottom: 10;
+    p {
+      text-align: justify;
+    }
+    @include lgg{
+      display: none;
+    }
+    @include xl{
+      // top: 100;
+      right: 13%;
+      top: 0%;
+      z-index: 100;
+      background-color: rgba(73, 19, 222, 0.3);
+    }
+    @include xll{
+        height: 200px;
+        width: 200px;
+        // left: 2%;
+        right:12%;
+        margin-top: 8%;
+        // top: -2%;
+        // bottom: 5%;
+        // right:9%;
+      // bottom: 30%;
+        // bottom: 5%;
+        // left: 10;
+    }
+    @include xxl {
+        top: -10%;
+        font-size: 16px;
+
+        }
+
+  }
+  .fourth-content-lifestyle {
+    display: grid;
+    grid-template-columns: 345px 345px 345px 345px;
+    grid-template-rows: 300px 300px;
+    @include xl{
+    grid-template-rows: 227px 227px 227px 227px;
+    grid-template-columns: 331px 236px 236px;
+    }
+    @include smm{
+      grid-template-columns: 236px 236px;
+      grid-template-rows: 227px 227px 227px;
+    }
+    @include sm{
+      grid-template-columns: 220px 220px;
+    } 
+    @include xsm{
+      grid-template-columns: 170px 170px;
+    }
+    overflow: hidden;
+    // grid-template: ;
+    grid-gap: 6px;
+    .fourth-content-layer {
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      
+    }
+    .fourth-content-layer:hover {
+      transition: background-color 0.5s;
+      width: 100%;
+      height: 100%;
+      background-color: transparent;
+    }
+    .fourth-content-item1 {
+      // background-color: blue;
+      background-image: url("../../assets/LifeStyle/Summer\ Camp/image_1.png");
+      background-size: cover;
+      background-position: center;
+      transition: transform 3s;
+      overflow: hidden;
+    }
+    .fourth-content-item2 {
+      grid-row-start: 1;
+      grid-row-end: 3;
+      grid-column-start: 2;
+      grid-column-end: 3;
+      // background-color: red;
+      background-image: url("../../assets/LifeStyle/Summer\ Camp/image_2.png");
+      background-size: cover;
+      background-position: center;
+      @include xl{
+        grid-column-end: 4;
+    }
+    @include smm{
+      grid-row-end: 2;
+    }
+    }
+    .fourth-content-item3 {
+      grid-row-start: 1;
+      grid-row-end: 3;
+      grid-column-start: 3;
+      grid-column-end: 4;
+      // background-color: blueviolet;
+      background-image: url("../../assets/LifeStyle/Summer\ Camp/image_3.png");
+      background-size: cover;
+      background-position: center;
+      @include xl{
+        grid-row-start: 3;
+        grid-row-end: 5;
+        grid-column-start: 2;
+        grid-column-end: 4;
+        // background-size: contain;
+        background-image: url('../../assets/LifeStyle/big_three.jpg');
+        background-size: covera;
+      }
+      @include smm{
+        grid-row-end: 4;
+      }
+    }
+
+    .fourth-content-item4 {
+      // background-color: yellow;
+      background-image: url("../../assets/LifeStyle/Summer\ Camp/image_4_no_hover.png");
+      background-size: 500px;
+      background-position: center;
+
+      div{
+        display: none;
+        @include xl{
+          display: block;
+        }
+      }
+      @include xl{
+        grid-row-start: 3;
+        grid-row-end: 4;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        background-image: url('../../assets/LifeStyle/big_four.jpg');
+        background-size: cover;
+      }
+      @include smm{
+        grid-row-start: 2;
+        grid-row-end: 3;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        display: block;
+      }
+    }
+    .fourth-content-item5 {
+      // background-color: green;
+      background-image: url("../../assets/LifeStyle/Summer\ Camp/image_5.png");
+      background-size: cover;
+      background-position: center;
+
+      @include xl{
+        grid-row-start: 4;
+        grid-row-end: 5;
+        grid-column-start: 1;
+        grid-column-end: 2;
+      }
+      @include smm{
+        grid-row-start: 3;
+        grid-row-end: 4;
+      }
+    }
+    .fourth-content-item6 {
+      // background-color: forestgreen;
+      background-image: url("../../assets/LifeStyle/Summer\ Camp/image_6.jpg");
+      background-size: cover;
+      background-position: center;
+      @include xl{
+        grid-row-start: 2;
+        grid-row-end: 3;
+        grid-column-start: 1;
+        grid-column-end: 2;
+      }
+
+    }
+  }
+}
+.fifth-content-experience {
+  display: flex;
+  height: 80vh;
+  width: 100%;
+  flex-direction: column;
+  // justify-content: center;
+  align-items: center;
+  color: black;
+  h2 {
+    height: 16%;
+    width: 81.2%;
+    display: flex;
+    flex-direction: column;
+    font: 20px var(--hFont);
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.7);
+    text-align: start;
+    justify-content: center;
+    // align-items: center;
+    // justify-content: center;
+    @include smm{
+      width: 100%;
+      text-align: center;
+    }
+  }
+  .fifth-content-experience-card {
+    display: flex;
+    width: 81.2%;
+    height: 468px;
+    @include smm{
+      display: flex;
+      height: 80vh;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      // height: 100vh;
+      flex-grow: 1;
+      width: 90%;
+    }
+    .fifth-content-experience-card-banner {
+      width: 70%;
+      background-image: url("../../assets/LifeStyle/b_exp.png");
+      background-color: transparent;
+      // background-position: cov;
+      background-size: cover;
+      background-position: center;
+      border-radius: 10px 0 0 10px;
+      @include smm{
+        height: 70%;
+
+        width: 90%;
+        border-radius: 0;
+      }
+    }
+    .fifth-content-experience-card-content {
+      width: 30%;
+      background-color: #457992;
+      border-radius: 0 10px 10px 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      // color: white;
+      padding: 1.5%;
+      @include smm{
+        width: 90%;
+        border-radius: 0 0 0 0;
+        height: 30%;
+        justify-content: space-around;
+      }
+      h2{
+        text-align: start;
+      }
+      h2,
+      p {
+        color: white;
+      }
+      p {
+        font-size: 16px;
+        font-weight: 400;
+        text-align: justify;
+        @include lg {
+          font-size: 12px;
+        }
+        @include smm{
+          font-size: 10px;
+        }
+      }
+      .lifestyle_biratnagar {
+        color: #ed1c24;
+        font-weight: bolder;
+        font-size: 20px;
+        @include xl{
+          font-size: 18px;
+        }
+        @include lg{
+          font-size: 16px;
+        }
+        @include smm{
+          font-size: 12px;
+        }
+      }
+      .lifestyle_intr_cllg {
+        color: #0057ff;
+        font-weight: bolder;
+        font-size: 20px;
+        @include xl{
+          font-size: 18px;
+        }
+        @include lg{
+          font-size: 16px;
+        }
+        @include smm{
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
+
+.sixth-content-events {
+  width: 100%;
+  height: 120vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  // gap: 10px;
+  @include lg {
+    height: 180vh;
+  }
+  @include smm{
+    height: 120vh;
+    justify-content: center;
+  }
+  h1 {
+    color: rgba(0, 0, 0, 0.7);
+    font: 48px var(--hFont);
+    font-weight: 500;
+  }
+  .events-card-back-section {
+    animation-name: upDownAnimation;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+    @include lg{
+      display: none;
+    }
+    @include smm{
+      display: none;
+    }
+
+    position: absolute;
+    z-index: -5;
+    // bottom: 50vh;
+    // top: -10px;
+    left: 10%;
+    width: 90.2%;
+    display: flex;
+    bottom: 15%;
+    justify-content: space-around;
+
+    .events-card-back {
+      height: 481px;
+      width: 20%;
+      background-color: #4a4a4a;
+      border-radius: 100px 20px 100px 5px;
+    }
+  }
+  .sixth-content-events-cards {
+    // background-color: #0057FF;
+    display: flex;
+    justify-content: space-between;
+    width: 81.2%;
+    align-items: center;
+    // height: 100px;
+    @include lg{
+      display: flex;
+      flex-flow: wrap;
+      justify-content: center;
+      // align-items: baseline;
+      gap: 30px;
+      width: 90%;
+      margin-top: 2%;
+    }
+    @include smm{
+      display: flex;
+      flex-flow: wrap;
+      justify-content: center;
+      // align-items: baseline;
+      gap: 30px;
+      width: 90%;
+    }
+    @include sm{
+      width: 100%;
+    }
+
+    .events-card {
+
+      border-radius: 100px 20px 100px 0;
+      width: 27%;
+      height: 481px;
+      background-color: #457992;
+      transition: transform 0.5s;
+      @include lg{
+        min-width: 35%;
+        height: 500px;
+      }
+      @include smm{
+        min-width: 35%;
+        height: 300px;
+      }
+      @include sm{
+        min-width: 40%;
+      }
+      @include xsm{
+        height: 250px;
+      }
+      h2 {
+        font: 22px var(--hFont);
+        font-weight: bold;
+         @include smm{
+          font-size: 16px;
+        }
+        @include sm{
+          font-size: 14px;
+        }
+        @include xsm{
+          font-size: 12px;
+        }
+      }
+      p {
+        text-align: justify;
+        font: 14px var(--pFont);
+        padding-top: 10%;
+        @include smm{
+          font-size: 9.5px;
+          padding-top: 5%;
+        }
+        @include sm{
+          font-size: 9px;
+        }
+        @include xsm{
+          padding-top: 2%;
+          font-size: 8px;
+        }
+      }
+      h2,
+      p {
+        width: 80%;
+        text-align: justify;
+        @include smm{
+          width: 90%;
+          text-align: start;
+        }
+        @include sm{
+          width: 95%;
+        }
+        @include xsm{}
+        // height: 50%;
+      }
+      #events-card-1-top {
+        background-image: url("../../assets/LifeStyle/aspire.png");
+        background-size: cover;
+        background-position: center;
+      }
+      #events-card-2-top {
+        background-image: url("../../assets/LifeStyle/job_fair.png");
+        background-size: cover;
+        background-position: center;
+      }
+      #events-card-3-top {
+        background-image: url("../../assets/LifeStyle/leadership.png");
+        background-size: cover;
+        background-position: center;
+      }
+      .events-card-top {
+        height: 45%;
+        background-color: red;
+        border-radius: 100px 20px 0px 0px;
+
+      }
+      .events-card-bottom {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        // height: 50%;
+        padding-top: 10%;
+        width: 100%;
+        align-items: center;
+        // background-color: wheat;
+        border-radius: 0 0 100px 0;
+        @include xsm{
+          padding-top: 5%;
+        }
+      }
+    }
+    .events-card:hover {
+      transform: scale(1.05);
+    }
+  }
+}
+// .seventh-content-sports{
+//     // display: grid;
+//     // width: 100%;
+//     // border: 1px solid blue;
+//     // grid-template-columns: 331px  331px   331px  331px  331px;
+//     // grid-template-rows:  227px   227px;
+//     width: 100%;
+//     height: 100vh;
+//     display: flex;
+//     justify-content: center;
+//     .seventh-content-sports-wrapper{
+//         // border: 0.1px solid blue;
+//         width: 80%;
+//         height: 93%;
+//         div{
+//         display: grid;
+//         grid-template-columns: 13.81% 13.81% 13.81% 13.81% 13.81% 13.81% 13.81%;
+//         grid-template-rows: 13.50% 13.50% 13.50% 13.50% 13.50% 13.50% 13.50%;
+//         }
+
+//     // // grid-template: ;
+//     // grid-gap: 1px;
+//     // .seventh-sports-heading{
+//     //     background-color: #0057FF;
+//     //     background-size: cover;
+//     //     padding: 0;
+//     //     margin:0;
+//     // }
+//     }
+// }
+.seventh-content-sports {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  .seventh-content-sports-back {
+    animation: upDownAnimation 4s ease-in-out 0s infinite;
+    height: 500px;
+    width: 383px;
+    background-color: #20409a;
+    border-radius: 200px 5px 200px 5px;
+    position: absolute;
+    right: 6%;
+    top: -5%;
+    z-index: -100;
+    // @include
+    @include sm{
+      display: none;
+    }
+  }
+  .seventh-content-sports-wrapper {
+    width: 81.2%;
+    height: 93%;
+    display: grid;
+    // grid-gap: 0.92%;
+    position: relative;
+
+    // border: 1px solid black;
+    grid-template-columns: 14.266% 14.266% 14.266% 14.266% 14.266% 14.266% 14.266%;
+    grid-template-rows: 13.5% 13.5% 13.5% 13.5% 13.5% 13.5% 13.5%;
+    .background-photo-sports-seventh {
+      // background-color: green;
+      grid-row-start: 1;
+      grid-row-end: 8;
+      grid-column-start: 3;
+      grid-column-end: 8;
+      z-index: -1;
+      background-image: url("./Big\ Sports.jpg");
+      background-size: cover;
+      // @include sm{
+      //   z-index: 100;
+      // }
+    }
+    .ball_sports_shadow{
+      animation: shadow_hover 1.5s ease-in-out 0s infinite;
+      position: absolute;
+      width: 100px;
+      height:80px;
+      background: radial-gradient( #000000, #ffffff,);
+      // right: 5%;
+      left: 14.5%;
+      top: 14.9%;
+      // transform: scaleY(0.5);
+      border-radius: 50%;
+      z-index: -1;
+      @include lg{
+        left: 15.7%;
+      }
+      @include md{
+        left: 15%;
+      }
+      @include smm{
+        width: 80px;
+        height: 60px;
+      left: 18.5%;
+      top: 13%;
+      }
+      @include sm{
+        width: 60px;
+        height: 40px;
+        left: 5.5%;
+        top: 6%;
+      }
+    }
+    .ball_sports_hand{
+      animation: hand_hover 1.5s ease-in-out 0s infinite;
+      width: 120px;
+      height: 80px;
+      left: 12%;
+      top: -4%;
+      // background-color: #0057ff;
+      background-size: cover;
+      position: absolute;
+      background-image: url('./hand.png');
+      @include lg{
+      left: 14%;
+      }
+      @include xl{
+        top: -6%;
+        width: 92px;
+        height: 60px;
+      }
+      @include smm{
+        top:-2%;
+        left: 18%;
+        width: 60px;
+        height: 40px;
+      }
+      @include sm{
+        top: -5.5%;
+        left: 6%;
+        width: 50px;
+        height: 30px;
+      }
+    }
+    .seventh-content-sports-heading {
+      z-index: 1000;
+      background-color: white;
+      color: #20409a;
+      grid-area: 1/1/3/6;
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      @include sm{
+        z-index: 100;
+      grid-area: 1/1/2/4;
+      justify-content: flex-start;
+      }
+
+      p {
+        display: flex;
+        width: 100%;
+        text-align: center;
+        align-items: center;
+        gap: 10px;
+        justify-content: center;
+        font: 7.98vw var(--hFont);
+        font-weight: bold;
+        @include lg{
+        font: 7vw var(--hFont);
+        font-weight: bolder;
+        }
+        @include smm{
+        font: 5.98vw var(--hFont);
+        }
+        @include sm{
+          font:  4.3vw var(--hFont);
+          font-weight: bold;
+          text-align: start;
+          justify-content: flex-start;
+        }
+        .ball_sports {
+          animation: ball_hover 1.5s ease-in-out 0s infinite;
+          background-image: url("../../assets/LifeStyle/ball_foot.png");
+          background-size: cover;
+          width: 80px;
+          height: 80px;
+          margin-top: 9px;
+          // padding-top: 20px;
+          // padding-left: 30px;
+          // padding: 20px 0;
+          background-color: #0057ff;
+          border-radius: 50%;
+
+          @include smm{
+            width: 40px;
+            height: 40px;
+          }
+          @include sm{
+            width: 20px;
+            height: 20px;
+          }
+        }
+        
+      }
+    }
+    .seventh-content-sports-year {
+      background-color: white;
+      color: #20409a;
+      grid-area: 3/1/4/5;
+      align-items: center;
+      display: flex;
+      justify-content: flex-end;
+      // width: 95%;
+      @include sm{
+        // background-color: black;
+        grid-area: 2/1/3/4;
+        // align-items: flex-start;
+        justify-content: flex-start;
+
+      }
+      p {
+        padding-right: 4%;
+        font:  4.5vw var(--hFont);
+        font-weight: bold;
+        text-align: end;
+        display: flex;
+        align-items: center;
+        @include sm{
+          text-align: start;
+          align-items: flex-start;
+          font:  4.3vw var(--hFont);
+          font-weight: bold;
+        }
+        .basket_sports {
+        // animation: ball_hover 5s ease-in-out 0s infinite;
+          width: 50px;
+          height: 50px;
+          // background-color: #0057FF;
+          border-radius: 50%;
+          background-image: url("../../assets/LifeStyle/ball_basket.png");
+          background-size: cover;
+          background-position: center;
+          @include sm{
+            width: 20px;
+            height: 20px;
+          }
+        }
+      }
+    }
+    .seventh-content-sports-card {
+      box-sizing: border-box;
+      border-radius: 5px;
+      background-color: #457992;
+      grid-row-start: 4;
+      grid-row-end: 8;
+      grid-column-start: 1;
+      grid-column-end: 3;
+      border-right: 1vw solid white;
+      @include smm{
+        grid-row-start: 4;
+        grid-row-end:8;
+        grid-column-end: 4;
+      }
+      @include sm{
+        grid-row-start: 3;
+      }
+      // border-radius: 10px;
+      .seventh-content-sports-card-header {
+        height: 45%;
+        background-color: rebeccapurple;
+        background-image: url("../../assets/LifeStyle/sports_card.png");
+        background-size: cover;
+      }
+      .seventh-content-sports-card-body {
+        height: 55%;
+        align-items: center;
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        p {
+          text-align: justify;
+          font-size: 0.8vw;
+          @include smm{
+            font-size: 1.3vw;
+          }
+          @include sm{
+            font-size: 2vw;
+          }
+        }
+        h2,
+        p {
+          width: 20vw;
+          @include smm{
+            width: 30vw;
+          }
+        }
+        h2{
+          font-size: 1.5vw;
+          @include smm{
+            font-size: 2vw;
+          }
+          @include sm{
+            font-size: 2.5vw;
+            text-align: start;
+          }
+        }
+      }
+    }
+  }
+}
+.eight-content-sports-chess {
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  border-radius: 10%;
+  .eight-content-sports-chess-back {
+    width: 30%;
+    height: 80%;
+    background-color: #20409A;
+    position: absolute;
+    right: 4%;
+    z-index: -100;
+    bottom: 1%;
+  }
+  .eight-content-sports-wrapper {
+    display: flex;
+    height: 80%;
+    width: 81.2%;
+    .eight-content-sports-image {
+      height: 100%;
+      width: 60%;
+      background-image: url("../../assets/LifeStyle/chess.png");
+      background-size: cover;
+    }
+    .eight-content-sports-content {
+      height: 100%;
+      width: 40%;
+      background-color: #457992;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      h3 {
+        font: 3vw var(--hFont);
+        color: white;
+        font-weight: bold;
+        @include smm{
+          font: 2vw var(--hFont);
+        }
+      }
+      h3,
+      p {  
+        text-align: justify;
+        width: 80%;
+      }
+      p{
+        font: 1vw var(--pFont);
+        @include smm{
+          font: 1.25vw var(--pFont);
+        }
+      }
+    }
+    // align-items: center;
+  }
+}
+.slide_lifestyle_img{
+  width: 400px;
+  height: 400px;
+}
+
+.swiper-slide{
+  // width: 60%;
+  .swiper-slide-visible{
+    .swiper-slide-active{
+      transform: translate(-50%);
+      margin-left: 200px;
+
+    }
+  }
+}
+.swiper-slide, .swiper-slide-visible, .swiper-slide-active{
+  transform: translate(-50%);
+  margin-left: 1000px;
+}
+.swiper_container{
+  width: 50%;
+}
+.top-container-first-wrapper{
+  width: 200px;
+}
+
+
+@keyframes hover {
+  0%{
+      transform: translateY(0);
+  }
+  40%{
+      transform: translateY(-20px);
+  }
+  100%{
+      transform: translateY(0);
+  }
+}
+
+@keyframes shadow_hover {
+
+  0%{
+    // transform: translateY(2px);
+    transform: scale(0.1,0.3);
+
+  }
+  50%{
+  //   transform: translateY(0px);
+    transform: scale(0.7,0.3);
+
+  }
+  100%{
+    // transform: scaleX(0);
+    transform: scale(0.1,0.3);
+
+    // transform: rotate(10deg);
+  }
+}
+
+
+@keyframes hand_hover {
+
+  0%{
+    // transform: translateY(2px);
+    transform: rotate(13deg);
+
+  }
+  50%{
+  //   transform: translateY(0px);
+    transform: rotate(0deg);
+
+  }
+  100%{
+    transform: rotate(13deg);
+  }
+}
+
+@keyframes ball_hover {
+
+  0%{
+    // transform: translateY(2px);
+    transform: translateY(-60px);
+
+  }
+  50%{
+  //   transform: translateY(0px);
+     transform: translateY(0);
+     transform: scaleX(1.2);
+
+  }
+  100%{
+    transform: translateY(-60px);
+  }
+}
+
+@keyframes wipe-enter {
+	// 0% {
+	// 	transform: scale(0, 0.4);
+	// }
+  40%{
+		transform: scale(0.5, 0.3);
+  }
+	50% {
+		transform: scale(1, 0.7);
+	}
+}
+@keyframes fade-bottom {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .second {
+    animation: wipe-enter 1s infinite;
+  }
+}
+@keyframes upDownAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-7px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+

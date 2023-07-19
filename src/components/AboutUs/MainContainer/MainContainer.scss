@@ -1,0 +1,126 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #FAFAFA;
+}
+
+.maincontainer-aboutus{
+    display: flex;
+    flex-direction: column;
+    margin: 1% 10%;
+    padding: 1% 5%;
+    background: #FAFAFA;
+    gap: 30px;
+}
+
+
+.maincontainer-aboutus h1{
+
+
+font-family: 'Roboto Serif';
+font-style: normal;
+font-weight: 700;
+font-size: 48px;
+line-height: 56px;
+color: #20409a;
+}
+
+.maincontainer-aboutus h3{
+
+
+font-family: 'Roboto Serif';
+font-style: normal;
+font-weight: 600;
+font-size: 30px;
+line-height: 35px;
+
+color: #ed1c24;
+    span{
+        color:#20409a ;
+
+    }
+}
+
+
+.content-aboutus{
+    display: flex;
+    justify-content: space-between;
+    gap: 70px;
+    align-items: center;
+    font-size: larger;
+}
+
+.showimage{
+    position: relative;
+}
+
+.firstborder{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #20409a;   
+
+}
+
+
+
+.secondborder{
+    right: 0;
+    top: 40%;
+    background: #ed1c24;
+
+}
+
+.firstborder , .secondborder{
+    border-radius: 20px 0px 20px 0px;
+    position: absolute;
+    border: 0px solid;
+    width: 50%;
+    height: 60%;
+    z-index: 1;
+}
+.about-image{
+    z-index: 5;
+    position: relative;
+    padding: 20px;
+}
+
+.maincontainer-aboutus .text{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    h2{
+        color:#6C6C6C;
+        font-family: var(--hFont);
+    }
+    p{
+
+font-family: var(--pFont);
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 27px;
+text-align: justify;
+color: #888888;
+    }
+
+    button{
+        width: 180px;
+height: 40px;
+border-radius: 10px;
+border:0px solid;
+background: #6369FF;
+color:white ;
+font-size: 18px;
+cursor: pointer;
+box-shadow: 0 0 5px rgba(0,0,0,0.5);
+cursor: pointer;
+&:hover{
+    background-color: #464bc2;
+}
+    }
+}

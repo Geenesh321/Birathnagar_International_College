@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=K2D:wght@100;200;300;400;500;600;700;800&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto+Serif:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@mixin xsm {
+    @media only screen and (max-width: 500px) {
+        @content;
+    }
+}
+
+@mixin sm {
+    @media only screen and (max-width: 620px) {
+        @content;
+    }
+}
+@mixin smm {
+    @media only screen and (max-width: 850px) {
+        @content;
+    }
+}
+@mixin md {
+    @media only screen and (max-width: 940px) {
+        @content;
+    }
+}
+
+@mixin lg {
+    @media only screen and (max-width: 1200px) {
+        @content;
+    }
+}
+@mixin lgg{
+    @media screen and (max-width:1350px) {
+        @content;
+    }
+}
+@mixin xl {
+    @media only screen and (max-width: 1400px) {
+        @content;
+    }
+}
+@mixin xll{
+    @media only screen and (max-width: 1440px){
+        @content;
+    }
+}
+@mixin xxl {
+    @media only screen and (max-width: 1560px) {
+        @content;
+    }
+}
+@mixin xxxl {
+    @media only screen and (max-width: 1660px) {
+        @content;
+    }
+}
+@mixin xsmh {
+    @media screen and (max-height:  900px) ,screen and (max-width:430px) {
+        @content;
+    }
+}
+
+:root{
+    --hFont: 'Roboto Serif', serif;
+    --pFont: 'Poppins', sans-serif;
+}

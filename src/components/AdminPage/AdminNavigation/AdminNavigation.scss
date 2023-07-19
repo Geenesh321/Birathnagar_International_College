@@ -1,0 +1,49 @@
+@import '../../../css-config/mixins.scss';
+
+    .admin-navigation{
+        position: fixed;
+        width: 350px;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        z-index: 100;
+        .admin-page-heading{
+            width: 100vw;
+            background-color: #0f8975;
+            padding: 10px;
+            text-align: center;
+            font-family: var(--hFont);
+            color: white;
+        }
+        .blogs{
+            width: 100%;
+            h1{
+                background-color: #0f8975;
+                color: white;
+                font-family: var(--hFont);
+                padding: 10px;
+            }
+            div{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 10px;
+                font-family: var(--pFont);
+                font-family: 16px;
+                background-color: rgba(0,0,0,0.05);
+                span{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 10px;
+                    svg{
+                        color: rgb(18, 201, 18);
+                    }
+                    &:hover{
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }

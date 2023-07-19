@@ -1,0 +1,121 @@
+@import '../../../../css-config/mixins.scss';
+
+.module_Slider {
+    width: 1180px;
+    // height: 99px;
+    border-radius: 11px;
+    background: #F2F2F2;
+    position: relative;
+    left: 50%;
+    top: 90px;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+
+
+    @media (max-width: 768px) {
+        margin: 0px 0px 75px 0px;
+        width: 90%;
+    }
+}
+
+.sliderButton {
+    border-radius: 10px;
+    background: #D43F45;
+    color: white;
+    padding: 10px 50px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.sliderButton:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.sliderButton.active {
+    background: #ffffff;
+    color: #D43F45;
+}
+
+.Content_DIVISION1,
+.Content_DIVISION2,
+.Content_DIVISION3,
+.Content_DIVISION4,
+.Content_DIVISION5 {
+    width: 650px;
+    border-radius: 11px;
+    background: rgba(217, 217, 217, 0.5);
+    transform: translate(36%, 65%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    // align-items: center;
+    margin: 0px 0px 20px -75px;
+    padding: 20px;
+
+    @media (max-width: 768px) {
+        width: 90%;
+        margin: 0 auto 20px;
+        transform: none;
+    }
+}
+
+.databaseText,
+.divisionText {
+    color: #000;
+    font-size: 24px;
+    font-family: var(--pFont);
+    font-weight: 700;
+}
+
+.moduleInfo {
+    display: flex;
+    gap: 20px;
+}
+
+.moduleCode,
+.credits,
+.moduleType {
+    color: #000;
+    text-align: center;
+    font-size: 18px;
+    font-family: var(--pFont);
+    font-weight: 400;
+    // margin: 0 37px;
+    @media (max-width: 650px) {
+        font-size: 14px;
+        
+    }
+}
+
+.div_Content_Image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.div_Content_Image img {
+    width: 500px;
+    height: 588px;
+    border-radius: 10px;
+    margin: -45% -65% 0% -20%;
+
+    // Responsive styles for small screens
+    @media (max-width: 768px) {
+        position: relative;
+        top: 179px;
+        right: 120px;
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+        display: none;
+    }
+}
+.DIV{
+    margin-bottom: 100px;
+}

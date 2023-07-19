@@ -1,0 +1,203 @@
+@import '../../../css-config/mixins.scss';
+
+.events-section{
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgba(0,0,0,0.05);
+    padding: 40px 8%;
+    padding-bottom: 100px;
+    overflow: hidden;
+    .events-heading{
+        display: flex;        
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        p{
+            font-family: var(--pFont);
+            color: rgb(125, 125, 255);
+            font-weight: 600;
+            font-size: 18px;
+        }
+        h2{
+            font-family: var(--hFont);
+            font-size: 32px;
+            margin: 10px 0;
+            color: rgba(0,0,0,0.5);
+        }
+        .u-line{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .box{
+                width: 15px;
+                height: 15px;
+                display: inline-block;
+                background-color: rgb(255, 187, 187);
+                transform: rotate(45deg);
+                border-radius: 2px;
+            }
+            .line{
+                width: 250px;
+                height: 2px;
+                background-color: rgba(255, 0, 0, 0.5);
+            }
+        }
+    }
+
+    .events-container{
+        width: 100%;
+        margin-top: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .images{
+            width: 50%;
+            // display: grid;
+            // grid-template-columns: repeat(auto-fill, minmax(auto, 200px));
+            // flex-flow: wrap;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: repeat(13,40px);
+            position: relative;
+            gap: 5px;
+            @include md{
+                width: 70%;
+            }
+            @include sm{
+                display: flex;
+                flex-flow: wrap;
+                width: 100%;
+            }
+            .image{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                overflow: hidden;
+                cursor: pointer;
+                position: relative;
+                .info{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: rgba(0,0,0,0.5);
+                    transform: scale(0);
+                    transition: all 0.5s ease-in-out;
+                    p{
+                        color: white;
+                        font-family: var(--pFont);
+                        font-size: 18px;
+                        border: 2px solid rgba(255, 255, 255, 0.5);
+                        width: 80%;
+                        height: 80%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                }
+                &:hover{
+                    .info{
+                        transform: scale(1);
+                    }
+                    img{
+                        transform: scale(1);
+                    }
+                }
+                img{
+                    transition: all 0.5s ease;
+                    height: 100%;
+                    transform: scale(1.1);
+                    @include sm{
+                        width: 100%;
+                    }
+                }
+                &:nth-child(1){
+                    grid-column: 1/2;
+                    grid-row: 1/4;
+                }
+                &:nth-child(2){
+                    grid-column: 2;
+                    grid-row: 1/4;
+                }
+                &:nth-child(3){
+                    grid-column: 3;
+                    grid-row: 1/4;
+                }
+                &:nth-child(4){
+                    grid-column: 4;
+                    grid-row: 1/4;
+                }
+                &:nth-child(5){
+                    grid-column: 1;
+                    grid-row: 4/11;
+                }
+                &:nth-child(6){
+                    grid-column: 2/4;
+                    grid-row: 4/11;
+                }
+                &:nth-child(7){
+                    grid-column: 4/5;
+                    grid-row: 4/11;
+                }
+                &:nth-child(8){
+                    grid-column: 1;
+                    grid-row: 11/14;
+                }
+                &:nth-child(9){
+                    grid-column: 2;
+                    grid-row: 11/14;
+                }
+                &:nth-child(10){
+                    grid-column: 3/5;
+                    grid-row: 11/14;
+                    img{
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+            }
+            .text{
+                position: absolute;
+                width: 500px;
+                height: 500px;
+                background-color: rgba(255, 255, 255, 0.8);
+                bottom: -20%;
+                right: -60%;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 50px;
+                box-shadow: 0 0 10px rgba(0,0,0,0.5);
+                animation: hover 4s ease-in-out 0s infinite;
+                @include md{
+                    width: 400px;
+                    height: 400px;
+                    right: -40%;
+                    p{
+                        font-size: 15px;
+                    }
+                }
+                @include sm{
+                    width: 300px;
+                    height: 300px;
+                    top: 0%;
+                    left: -15%;
+                    background-color: rgba(255, 255, 255, 0.9);
+                    p{
+                        font-size: 12px;
+                    }
+                }
+                p{
+                    font-family: var(--pFont);
+                    text-align: center;
+                }
+            }
+        }
+
+    }
+}

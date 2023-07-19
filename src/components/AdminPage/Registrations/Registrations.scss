@@ -1,0 +1,75 @@
+.contacts-table{
+    width: calc(100% - 350px);
+    height: 100vh;
+    float: right;
+    margin-top: 88px;
+    .clear-button{
+        float: right;
+        margin-right: 50px;
+        background-color: rgba(0,0,0,0.7);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 50px;
+        gap: 10px;
+        svg{
+            color: rgb(255, 0, 0);
+            font-size: 20px;
+        }
+        &:hover{
+            cursor: pointer;
+        }
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        float: right;
+        margin-top: 20px;
+        tr{
+            th {
+                background-color: rgba(0,0,0,0.1);
+            }
+            th, td {
+                padding: 8px;
+                text-align: left;
+                border-bottom: 1px solid #ddd;
+                padding: 10px 20px;
+                text-align: justify;
+            }
+            td{
+                svg{
+                    font-size: 20px;
+                    margin-right: 20px;
+                    cursor: pointer;
+                    &.edit{
+                        color: blue;
+                    }
+                    &.delete{
+                        color: red;
+                    }
+                }
+            }
+            &:hover {
+                background-color: rgba(0,0,0,0.05);
+                cursor: default;
+            }
+        }
+    }
+    .empty {
+        width: 100%;
+        font-size: 30px;
+        color: rgba(0, 0, 0, 0.6);
+        font-weight: 500;
+        font-family: var(--pFont);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        height: 40vh;
+        svg{
+            font-size: 60px;
+        }
+    }
+}

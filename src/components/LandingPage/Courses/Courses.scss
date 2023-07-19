@@ -1,0 +1,139 @@
+@import '../../../css-config/mixins.scss';
+
+.courses{
+    width: 100%;
+    padding: 0px 8%;
+    padding-bottom: 40px;
+    .courses-heading{
+        display: flex;        
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin-top: 30px;
+        p{
+            font-family: var(--pFont);
+            color: rgba(255, 0, 0, 0.5);
+            font-weight: 600;
+            font-size: 18px;
+        }
+        h2{
+            font-family: var(--hFont);
+            font-size: 32px;
+            margin: 0 0 20px 0;
+            color: rgba(0,0,0,0.5);
+        }
+        .u-line{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            .box{
+                position: absolute;
+                width: 15px;
+                height: 15px;
+                display: inline-block;
+                background-color: rgba(110, 140, 221, 0.5);
+                transform: rotate(45deg);
+                border-radius: 2px;
+            }
+            .box:first-child{
+                left: 45%;
+            }
+            .box:last-child{
+                right: 45%;
+            }
+            .line{
+                width: 250px;
+                height: 2px;
+                background-color: #6D8ADD;
+            }
+        }
+    }
+
+    .course-container{
+        width: 100%;
+        padding: 40px 0;
+        margin-top: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-flow: wrap;
+        gap: 100px;
+        @include md{
+            gap: 50px;
+        }
+        .card{
+            position: relative;
+            @include sm{
+                width: 90%;
+            }
+            .content{
+                background-color: white;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+                border-radius: 8px;
+                display: flex;
+                flex-flow: column;
+                align-items: center;
+                justify-content: center;
+                padding: 20px;
+                width: 100%;
+                img{
+                    width: 100%;
+                }
+                &:last-child{
+                    animation: hover2 4s ease-in-out 2s infinite;
+                }
+                &:first-child{
+                    animation: hover2 4s ease-in-out 0s infinite;
+                }
+                button{
+                    background-color: #D64D4D;
+                    border: none;
+                    outline: none;
+                    border-radius: 8px;
+                    padding: 10px 25px;
+                    margin: 20px 0 5px 0;
+                    color: white;
+                    font-weight: 500;
+                    font-size: 16px;
+                    font-family: var(--hFont);
+                    cursor: pointer;
+                }
+            }
+            .design{
+                position: absolute;
+                width: 50%;
+                height: 50%;
+                z-index: -1;
+                border-radius: 10px;
+            }
+            &.card1{
+                .design{
+                    background-color: #C78C8E;
+                    top: -20px;
+                    left: -20px;
+                }
+            }
+            &.card2{
+                .design{
+                    background-color: #637CB7;
+                    bottom: -20px;
+                    right: -20px;
+                }
+            }
+        }
+    }
+
+}
+
+@keyframes hover2 {
+    0%{
+        transform: translateY(0);
+    }
+    40%{
+        transform: translateY(-10px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}

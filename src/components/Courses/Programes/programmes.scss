@@ -1,0 +1,221 @@
+@import '../../../css-config/mixins.scss';
+
+
+.programmes {
+  height: 445px;
+  width: 100%;
+  .Cover-Image {
+    position: relative;
+    height: 100%;
+    width: 100%;
+
+    .dim {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to right, rgba(0, 0, 0) 0%, rgba(0, 0, 0, 0.9) 50%, rgba(0, 0, 0, 0) 100%);
+      top: 0;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+
+    .programmes_Content {
+      position: absolute;
+      top: 0;
+      height: 100%;
+      // width: 50%;
+    }
+
+    h1 {
+      padding-top: 110px;
+      padding-left: 130px;
+      font-size: 55px;
+      color: #ffffff;
+      margin-bottom: 10px;
+      font-family: var(--hFont);
+    }
+
+    p {
+      position: absolute;
+      font-size: 20px;
+      color: #ffffff;
+      line-height: 1.5;
+      align-items: center;
+      text-align: justify;
+      padding: 20px 55px 0px 135px;
+      font-family: var(--pFont);
+
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .programmes {
+    .Cover-Image {
+      .programmes_Content {
+        // width: 90%;
+
+        h1 {
+          font-size: 30px;
+          width: 100%;
+          line-height: 1.5;
+          // padding: 130px 150px 3px 0px;
+          padding-left: 30px;
+          padding-top: 130px;
+        }
+
+        p {
+          font-size: 16px;
+          padding: 0px 0px 0px 32px;
+        }
+      }
+    }
+  }
+}
+
+.programmes_Heading {
+  text-align: center;
+  padding: 0 20px;
+
+  h1 {
+    font-size: 60px;
+    color: black;
+    opacity: 58%;
+    margin-top: 15px;
+    font-family: 'K2D', sans-serif;
+  }
+
+  p {
+    width: 100%;
+    font-size: 18px;
+    color: black;
+    opacity: 78%;
+    font-family: var(--pFont);
+    font-weight: 500;
+    text-align: center;
+    padding: 20px 20%;
+  }
+
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 30px;
+    }
+
+    p {
+      font-size: 14px;
+      padding: 10px 0px 0px 0px;
+    }
+  }
+}
+
+// course distribution
+.course_distrubution{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 8%;
+  padding-bottom: 150px;
+  gap: 50px;
+  position: relative;
+  @media (max-width: 500px) {
+    flex-direction: column;
+  }
+  .hat{
+    width: 180px;
+    position: absolute;
+    z-index: 1;
+    @media (max-width: 800px) {
+      display: none;
+    }
+    &.hat1{
+      left: 60px;
+      top: 30px;
+    }
+    &.hat2{
+      right: 40px;
+      bottom: 100px;
+    }
+  }
+  .card{
+    width: 350px;
+    height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    @media (max-width: 800px) {
+      width: 300px;
+      height: 400px;
+    }
+    @media (max-width: 800px) {
+      width: 200px;
+      height: 300px;
+    }
+    @media (max-width: 500px) {
+      flex-direction: column;
+      width: 100%;
+      height: 250px;
+    }
+    p{
+      background-color: red;
+      width: 150px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      font-weight: 600;
+      color: white;
+      border-radius: 8px;
+      cursor: pointer;
+      z-index: 1;
+      &:hover{
+        transform: scale(1.1);
+        transition: all 0.5s ease;
+      }
+    }
+    .image{
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      &:hover{
+        img{
+          transform: scale(1.1);
+          transition: all 0.5s ease;
+        }
+      }
+      img{
+        height: 100%;
+      }
+    }
+    &.bibm-card{
+      p{
+        margin-bottom: -30px;
+        background-color: rgb(89, 196, 89);
+      }
+    }
+    &.bihm-card{
+      @media (max-width: 500px) {
+        flex-direction: column-reverse;
+      }
+      p{
+        margin-top: -30px;
+        background-color: rgb(128, 191, 201);
+        color: rgb(31, 72, 115);
+        @media (max-width: 500px) {
+          margin-top: 0;
+          margin-bottom: -30px;
+        }
+      }
+    }
+  }
+}

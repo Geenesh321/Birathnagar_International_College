@@ -1,0 +1,431 @@
+@import '../../../css-config/mixins.scss';
+
+.banner{
+    width: 100%;
+    height: calc(100vh - 30px);
+    background-color: white;
+    position: relative;
+    @include md{
+        background-image: url('../../../assets/Landing/banner1.png');
+        background-size: cover;
+        background-position: center;
+    }
+    .top-bar{
+        width: 100%;
+        height: 30px;
+        background-color: rgb(217, 217, 217);
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 30px;
+        padding: 0 8%;
+        position: fixed;
+        top: 0;
+        z-index: 101;
+        @include sm{
+            display: none;
+        }
+        p{
+            color: #21409A;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--pFont);
+            font-size: 12px;
+            @include md{
+                font-size: 10px;
+            }
+            svg{
+                margin-right: 5px;
+            }
+            span{
+                transition: all 0.5s ease;
+                color: #21409A;
+                cursor: pointer;
+            }
+            &:last-child{
+                svg{
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+    .navigation-bar{
+        position: relative;
+        z-index: 9;
+        margin-top: 30px;
+        background-color: white;
+        box-shadow: 0 0 10px black;
+        font-family: var(--pFont);
+        nav{
+            width: 100%;
+            text-align: center;
+            transition: all 0.5s ease;
+            z-index: 100;
+            @include btn{
+                position: fixed;
+                left: 0;
+                top: 30px;
+                padding: 0 8%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                background-color: white;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+                @include sm{
+                    top: 0;
+                }
+            }
+            &.sticky{
+                position: fixed;
+                left: 0;
+                top: 30px;
+                padding: 0 8%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                background-color: white;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+                @include sm{
+                    top: 0;
+                }
+                ul{
+                    width: auto;
+                    background: none;
+                    @include lg{
+                        position: fixed;
+                        top: -100%;
+                        left: 0;
+                        width: 100%;
+                        height: auto;
+                        background-color: rgb(250, 250, 250);
+                        display: flex;
+                        flex-direction: column;
+                    }
+                }
+            }
+            .logo{
+                height: 60px;
+                cursor: pointer;
+                margin: 10px 0;
+            }
+            ul{
+                background-color: #ECF4F8;
+                width: 100%;
+                @include btn{
+                    position: fixed;
+                    top: -100%;
+                    left: 0;
+                    width: 100%;
+                    height: auto;
+                    background-color: rgb(250, 250, 250);
+                    display: flex;
+                    flex-direction: column;
+                    transition: all 0.5s ease;
+                    &.active{
+                        top: 110px;
+                        padding: 20px 0;
+                    }
+                }
+                @include sm{
+                    &.active{
+                        top: 80px;
+                    }
+                }
+                li{
+                    display: inline-block;
+                    list-style: none;
+                    margin: 20px;
+                    cursor: pointer;
+                    color: black;
+                    transition: all 0.5s ease;
+                    &.home-opt,&.about-opt,&.course-opt,&.partners-opt,&.admission-opt,&.life-opt,&.blogs-opt,&.enquire-opt{
+                        color: red;
+                    }
+                    &:hover{
+                        color: red;
+                    }
+                    @include xl{
+                        margin: 20px;
+                    }
+                    &.course{
+                        position: relative;
+                        .courses{
+                            // display: none;
+                            position: absolute;
+                            background-color: rgb(237, 237, 237);
+                            padding: 0;
+                            top: 100%;
+                            width: 150px;                            
+                            border-top: 2px solid red;
+                            left: -55%;
+                            display: none;
+                            opacity: 0;
+                            transition: all 0.5s ease-in-out;
+                            @include btn{
+                                left: 50%;
+                                transform: translateX(-50%);
+                            }
+                            &.active{
+                                transition: all 0.5s ease-in-out;
+                                display: inline-block;
+                                opacity: 1;
+                            }
+                            li{
+                                margin: 0;
+                                width: 100%;
+                                padding: 5px 20px;
+                                cursor: pointer;
+                                text-align: center;
+                                &:hover{
+                                    background-color: rgba(0,0,0,0.05);
+                                    color: black;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .menu-btn{
+                display: none;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 4px;
+                cursor: pointer;
+                @include btn{
+                    display: flex;
+                }
+                span{
+                    display: inline-block;
+                    width: 30px;
+                    height: 4px;
+                    background-color: rgba(255, 0, 0, 0.7);
+                    transition: all 0.5s ease;
+                    border-radius: 50px;
+                }
+                &.active{
+                    span:nth-child(1){
+                        transform: rotate(45deg) translate(11px, 2px);
+                    }
+                    span:nth-child(2){
+                        transform: translateX(30px);
+                        opacity: 0;
+                    }
+                    span:nth-child(3){
+                        transform: rotate(-45deg) translate(9px, -0px);
+                    }
+                }
+                &:hover{
+                    span:nth-child(2){
+                        transform: translateX(15px);
+                        background: rgba(0, 0, 255, 0.5);
+                    }
+                }
+            }
+        }
+    }
+
+    .banner-container{
+        width: 100%;
+        padding: 0 8%;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-25%);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        z-index: 0;
+        @include lg{
+            transform: translateY(-40%);
+        }
+        .banner-content{
+            p{
+                font-weight: 700;
+                font-size: 24px;
+                color: rgba(0,0,0,0.7);
+                font-family: var(--pFont);
+            }
+            h1{
+                color: #21409A;
+                font-family: var(--hFont);
+                font-weight: 700;
+                font-size: 48px;
+                text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+                margin-top: 10px;
+                h1{
+                    display: inline;
+                    &:first-child{
+                        color: #ED1C24;
+                    }
+                }
+                span{
+                    font-family: var(--hFont);
+                    font-weight: 700;
+                    font-size: 48px;
+                    font-size: 48px;
+                    display: block;
+                    color: #ED1C24;
+                }
+            }
+            button{
+                padding: 10px 20px;
+                background: none;
+                border: 2px solid #21409A;
+                border-radius: 5px;
+                margin-top: 20px;
+                color: #21409A;
+                font-size: 16px;
+                font-weight: 700;
+                cursor: pointer;
+                // position: relative;
+                overflow: hidden;
+                transition: all 1s ease;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
+                @include md{
+                    color: #69d869;
+                    border: 2px solid #69d869;
+                }
+                svg{
+                    font-size: 20px;
+                }
+                &:hover{
+                    box-shadow: inset 200px 0 0 0 #21409A;
+                    color: white;
+                    @include md{
+                        box-shadow: inset 200px 0 0 0 #69d869;
+                    }
+                }
+            }
+            @include lg{
+                p{
+                    font-size: 22px;
+                }
+                h1{
+                    font-size: 40px;
+                    span{
+                        font-size: 40px;
+                    }
+                }
+            }
+            @include md{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                p{
+                    color: white;
+                    font-weight: 500;
+                    text-align: center;
+                }
+                h1{
+                    color: white;
+                    text-align: center;
+                    span{
+                        color: white;
+                    }
+                    h1{
+                        color: #ED1C24;
+                    }
+                    text-shadow: none;
+                }
+            }
+        }
+        
+        // Bubbles Animation
+        @include md{
+            .bubble{
+                display: none;
+            }
+        }
+        .bubble1{
+            width: 80px;
+            height: 80px;
+            position: absolute;
+            top: -100px;
+            right: 0;
+            border-radius: 50%;
+            background: none;
+            border: 4px solid #ECF4F8;
+            animation: bubble1 15s ease-in 0s infinite;
+            z-index: -1;
+        }
+        .bubble2{
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top: 50px;
+            right: 0;
+            border-radius: 50%;
+            background: none;
+            border: 6px solid #ECF4F8;
+            animation: bubble1 10s ease-in 2s infinite;
+            z-index: -1;
+        }
+        .bubble3{
+            width: 80px;
+            height: 80px;
+            position: absolute;
+            bottom: -100px;
+            right: 0;
+            border-radius: 50%;
+            background: none;
+            border: 5px solid #ECF4F8;
+            animation: bubble1 20s ease-in 4s infinite;
+            z-index: -1;
+        }
+    }
+    .image{
+        // width: 450px;
+        height: 500px;
+        transition: all 1s ease;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        overflow: hidden;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+        img{
+            animation: hover 4s ease-in-out 0s infinite;
+            height: 110%;
+            z-index: 1;
+        }
+        // @include lg{
+        //     width: 300px;
+        //     height: 300px;
+        // }
+        @include md{
+            display: none;
+        }
+    }
+}
+
+@keyframes bubble1 {
+    0%{
+        opacity: 0;
+    }
+    10%{
+        opacity: 1;
+    }
+    100%{
+        transform: translateX(-100vw);
+    }
+}
+
+@keyframes hover {
+    0%{
+        transform: translateY(0);
+    }
+    40%{
+        transform: translateY(-20px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
